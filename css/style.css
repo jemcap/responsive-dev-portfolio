@@ -1,19 +1,92 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
+/* global variables to declare colours much more conviniently */
 :root {
   --primary-color: 
   --secondary-color:
 }
 
+/* Using flex box to manipulate the positioning of the header items*/
 header {
-  background-color: gray;
+  background-color: ;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+
+
+/* because the header items have moved all the way to the end of the viewport using flex-end.
+The logo is also moved along with it. To separate the logo and the nav links, I used margin-right: auto
+on the logo to automatically, according to the width of the viewport, to move completely to the right. */
+.logo {
+  margin-right: auto;
+}
+
+/* removes the underline of the anchor tag */
+li, a {
+  text-decoration: none;
+  text-transform: uppercase
+}
+
+/* removes the list-style of the anchor tags, making the nav links more appropriate */
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline;
+  padding: 0 20px;
+}
+
+.nav__links li a {
+  transition: all .3s ease 0s;
+  color: gray;
+}
+
+.nav__links li a:hover {
+  color: blue;
+}
+
+.cta button{
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease 0s;
+}
+
+
+.cta button:hover {
+  padding: 15px;
+  box-shadow: 2px 4px  #4f4f4f
 }
 
 .hero-banner {
-  background-image: rgba(255, 255, 255, 0.8)
+  height: 80vh;
+  overflow: hidden;
+  background: rgb(235,124,255);
+  background: linear-gradient(63deg, rgba(235,124,255,1) 0%, rgba(0,26,255,1) 100%);
+text-align: center;
+padding: 50px;
 }
+
+.banner__content {
+  color: white;
+}
+
+.banner__content h1 {
+  font-size: 4rem;
+
+}
+
 
 body {
   margin: 0;
