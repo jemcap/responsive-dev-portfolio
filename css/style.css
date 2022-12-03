@@ -70,7 +70,7 @@ li, a {
 }
 
 .hero-banner {
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   background: rgb(235,124,255);
   background: linear-gradient(63deg, rgba(235,124,255,1) 0%, rgba(0,26,255,1) 100%);
@@ -85,6 +85,34 @@ padding: 50px;
 .banner__content h1 {
   font-size: 4rem;
 
+}
+
+.page-wrapper {
+  margin: 10px 20px;
+}
+
+#about h1 {
+  font-size: 3rem;
+
+}
+#categoryGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-areas:
+      "web1 web2 web3"
+      "web4 web4 web5"
+      ;
+  }
+
+  #web1 {
+    grid-area: web1;
+    background-color: antiquewhite;
+  }
+
+#work h1 {
+  font-size: 3rem;
 }
 
 
