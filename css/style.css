@@ -11,7 +11,6 @@
 
 /* Using flex box to manipulate the positioning of the header items*/
 header {
-  background-color: ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -38,6 +37,7 @@ li, a {
   list-style: none;
 }
 
+/* turns all the li in the nav__links to be laid out inline with each other instead stacked on top of one another */
 .nav__links li {
   display: inline;
   padding: 0 20px;
@@ -116,36 +116,34 @@ padding: 50px;
   /* IDs */
 
   #about {
-    display: flex;
     margin-bottom: 100px;
   }
 
 
   #about h1 {
     font-size: 3rem;
-    width: 115px;
+    width: auto;
   
   }
 
   #about p {
-    margin: 0px 5%;
     display: flex;
     align-items: center;
   }
   #categoryGrid {
-      margin: 0px 5%;
+    margin: 0 50px;
       display: grid;
-      grid-template-rows: 300px 300px 300px;
-      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 400px 400px 400px;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
-        "web1 web1 web1"
-        "web2 web3 web4"
-        "web5 web5 web5"
+        "web1 web1"
+        "web2 web3"
+        "web4 web5"
         ;
     }
   
     #work {
-      display: flex;
+      margin-bottom: 150px;
     }
   
     .page-section h1 {
@@ -183,6 +181,34 @@ padding: 50px;
 #work h1 {
   font-size: 3rem;
 }
+
+
+#contact h1 {
+  font-size: 3rem;
+  width: auto;
+
+}
+
+#skill__blocks {
+  display: flex;
+}
+
+.block1, 
+.block2,
+.block3 {
+  border: solid 2px black;
+}
+
+.contact__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
+
+
 
 
 
