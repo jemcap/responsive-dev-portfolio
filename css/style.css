@@ -91,52 +91,7 @@ padding: 50px;
   margin: 10px 20px;
 }
 
-#about h1 {
-  font-size: 3rem;
 
-}
-#categoryGrid {
-    margin: 0px 5%;
-    display: grid;
-    grid-template-rows: 300px 300px 300px;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-areas:
-      "web1 web1 web1"
-      "web2 web3 web4"
-      "web5 web5 web5"
-      ;
-  }
-
-  #work {
-    display: flex;
-  }
-
-  .page-section h1 {
-    margin-right: 50px;
-  }
-
-
-
-  #web1 {
-    grid-area: web1;
-    background-color: antiquewhite;
-  }
-  #web2 {
-    grid-area: web2;
-    background-color: skyblue;
-  }
-  #web3 {
-    grid-area: web3;
-    background-color: red
-  }
-  #web4 {
-    grid-area: web4;
-    background-color: rgb(213, 144, 54);
-  }
-  #web5 {
-    grid-area: web5;
-    background-color: antiquewhite;
-  }
 
   .categoryGridArea {
     background-position: center;
@@ -147,6 +102,83 @@ padding: 50px;
     display: grid;
     align-content: end;
   }
+
+  .heading {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    border-bottom: 5px solid #ff6200;
+  }
+
+
+  /* IDs */
+
+  #about {
+    display: flex;
+    margin-bottom: 100px;
+  }
+
+
+  #about h1 {
+    font-size: 3rem;
+    width: 115px;
+  
+  }
+
+  #about p {
+    margin: 0px 5%;
+    display: flex;
+    align-items: center;
+  }
+  #categoryGrid {
+      margin: 0px 5%;
+      display: grid;
+      grid-template-rows: 300px 300px 300px;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-areas:
+        "web1 web1 web1"
+        "web2 web3 web4"
+        "web5 web5 web5"
+        ;
+    }
+  
+    #work {
+      display: flex;
+    }
+  
+    .page-section h1 {
+      margin-right: 50px;
+    }
+  
+  
+  
+    #web1 {
+      grid-area: web1;
+      background-color: antiquewhite;
+      transition: all .3s ease 0s;
+    }
+    #web2 {
+      grid-area: web2;
+      background-color: skyblue;
+    }
+    #web3 {
+      grid-area: web3;
+      background-color: red
+    }
+    #web4 {
+      grid-area: web4;
+      background-color: rgb(213, 144, 54);
+    }
+    #web5 {
+      grid-area: web5;
+      background-color: antiquewhite;
+    }
+  
+    #web1:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
 #work h1 {
   font-size: 3rem;
