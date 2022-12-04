@@ -74,27 +74,37 @@ li, a {
   overflow: hidden;
   background: rgb(235,124,255);
   background: linear-gradient(63deg, rgba(235,124,255,1) 0%, rgba(0,26,255,1) 100%);
-text-align: center;
+
 padding: 50px;
 }
 
 .banner__content {
   color: white;
-  align-content: center;
+  text-align: center;
 }
 
 .banner__content h1 {
   font-size: 4rem;
+  
 
 }
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+}
+
+.self__portrait {
+  width: 75%
+}
+  
+
 
 .page-wrapper {
   margin: 10px 20px;
 }
 
-.banner__image {
-  width: 100px;
-}
+  
 
 
 
@@ -278,6 +288,19 @@ p {
   .nav__links li {
     display: inline;
     padding: 0 20px;
+  }
+
+
+  .banner__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .self__portrait {
+    width: 100%;
+    margin-top: 70px;
+
   }
   
 }
