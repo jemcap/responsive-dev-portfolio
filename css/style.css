@@ -52,7 +52,7 @@ li, a {
   color: blue;
 }
 
-.cta button{
+.cta button {
   padding: 10px;
   text-transform: uppercase;
   border-radius: 20px;
@@ -80,6 +80,7 @@ padding: 50px;
 
 .banner__content {
   color: white;
+  align-content: center;
 }
 
 .banner__content h1 {
@@ -89,6 +90,10 @@ padding: 50px;
 
 .page-wrapper {
   margin: 10px 20px;
+}
+
+.banner__image {
+  width: 100px;
 }
 
 
@@ -117,12 +122,16 @@ padding: 50px;
 
   #about {
     margin-bottom: 100px;
+    
   }
 
 
   #about h1 {
+    display: flex;
+    justify-content: center;
     font-size: 3rem;
     width: auto;
+    
   
   }
 
@@ -180,19 +189,27 @@ padding: 50px;
 
 #work h1 {
   font-size: 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 
 #contact h1 {
   font-size: 3rem;
   width: auto;
+  display: flex;
+  justify-content: center;
 
 }
 
 #skill__blocks {
   display: flex;
 }
-
+#contact_cta {
+  border: solid 2px blue;
+  border-radius: 25px;
+  padding: 10px;
+}
 .block1, 
 .block2,
 .block3 {
@@ -203,6 +220,7 @@ padding: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin: 20px 20px;
 }
 
 
@@ -231,6 +249,37 @@ h6 {
 
 p {
   margin: 0;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 770px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+         margin: auto;
+    width: 770px;
+    padding: 30px
+  }
+
+  .logo {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+  
+  }
+
+  .nav__links li {
+    display: inline;
+    padding: 0 20px;
+  }
+  
 }
 
 
