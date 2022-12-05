@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,6 +33,14 @@ p {
   --primary-color: 
   --secondary-color:
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
 /* Using flex box to manipulate the positioning of the header items*/
 header {
@@ -94,17 +107,95 @@ li, a {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: rgb(235,124,255);
-  background: linear-gradient(63deg, rgba(235,124,255,1) 0%, rgba(0,26,255,1) 100%);
 padding: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
+
+
 }
+
+.hero__title {
+  width: 75%;
+}
+
+.hero__title-color {
+  position: relative;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.hero__title h1 {
+  font-weight: bold;
+}
+
+.hero__title-color:hover {
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.hero__title a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.hero__title a::before,
+.hero__title a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.hero__title a::before {
+  background-color: #54b3d6;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.hero__title a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #54b3d6;
+}
+
+.hero__title a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.hero__title a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.hero__title a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.hero__title a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+.hero__title a {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  vertical-align: top;
+}
+
 
 .banner__content {
   color: white;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner__content h1 {
@@ -113,6 +204,25 @@ align-items: center;
 
 }
 
+
+.button {
+
+}
+
+/* Hero IDs */
+#hero {
+  height: 90vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+#banner__image {
+  width: 700px;
+  bottom: 15%;
+}
 
 
 
