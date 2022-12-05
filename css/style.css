@@ -67,8 +67,9 @@ li {
 }
 
 /* removes the list-style of the anchor tags, making the nav links more appropriate */
-.nav__links {
+.nav__links a {
   list-style: none;
+  text-decoration: none;
 }
 
 /* turns all the li in the nav__links to be laid out inline with each other instead stacked on top of one another */
@@ -274,71 +275,65 @@ padding: 50px;
 
 
 /* work grid */
-  .categoryGridArea {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    display: grid;
-    
-  
-  }
-
-  .heading {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    height: 25px;
-    color: white;
-    font-size: 18px;
-    border-bottom: 5px solid #ff6200;
-  }
 
 
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas:
+    "web1 web1"
+    "web2 web3"
+    "web4 web5";
+}
+
+#web1 {
+  grid-area: web1;
+  background-color: antiquewhite;
+  transition: all .3s ease 0s;
+}
+#web2 {
+  grid-area: web2;
+  background-color: skyblue;
+}
+#web3 {
+  grid-area: web3;
+  background-color: red
+}
+#web4 {
+  grid-area: web4;
+  background-color: rgb(213, 144, 54);
+}
+#web5 {
+  grid-area: web5;
+  background-color: antiquewhite;
+}
+
+#web1:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #ff6200;
+}
 
 
-  /* IDs */
-
-
-
-  #categoryGrid {
-      display: grid;
-      grid-template-rows: 300px 300px 300px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        "web1 web1"
-        "web2 web3"
-        "web4 web5"
-        ;
-    }
-  
-  
-  
-  
-    #web1 {
-      grid-area: web1;
-      background-color: antiquewhite;
-      transition: all .3s ease 0s;
-    }
-    #web2 {
-      grid-area: web2;
-      background-color: skyblue;
-    }
-    #web3 {
-      grid-area: web3;
-      background-color: red
-    }
-    #web4 {
-      grid-area: web4;
-      background-color: rgb(213, 144, 54);
-    }
-    #web5 {
-      grid-area: web5;
-      background-color: antiquewhite;
-    }
-  
-    #web1:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
 
 
 /* Contact Section */
