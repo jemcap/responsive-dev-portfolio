@@ -1,6 +1,26 @@
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
   margin: 0;
 }
 /* global variables to declare colours much more conviniently */
@@ -16,6 +36,7 @@ header {
   align-items: center;
   padding: 10px 30px;
 }
+
 
 
 
@@ -70,17 +91,20 @@ li, a {
 }
 
 .hero-banner {
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   background: rgb(235,124,255);
   background: linear-gradient(63deg, rgba(235,124,255,1) 0%, rgba(0,26,255,1) 100%);
-
 padding: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .banner__content {
   color: white;
-  text-align: center;
+
 }
 
 .banner__content h1 {
@@ -89,33 +113,66 @@ padding: 50px;
 
 }
 
-.banner__image {
-  display: flex;
-  justify-content: center;
-}
 
-.self__portrait {
-  width: 75%
-}
-  
 
 
 .page-wrapper {
-  margin: 10px 20px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 75%;
+  padding-left: 2rem;
+  border-left: 2px solid black;
+}
+
+/* About section */
+
+.about__title h1 {
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 2rem;
+  
+}
+
+/* Work */
+.work__title h1 {
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 2rem;
+  
+}
+
+#work {
+  margin-top: 2rem;
 }
 
   
 
 
-
+/* work grid */
   .categoryGridArea {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 5px;
     cursor: pointer;
     display: grid;
-    align-content: end;
+    
+  
   }
 
   .heading {
@@ -128,31 +185,15 @@ padding: 50px;
   }
 
 
+
+
   /* IDs */
 
-  #about {
-    margin-bottom: 100px;
-    
-  }
 
 
-  #about h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-    width: auto;
-    
-  
-  }
-
-  #about p {
-    display: flex;
-    align-items: center;
-  }
   #categoryGrid {
-    margin: 0 50px;
       display: grid;
-      grid-template-rows: 400px 400px 400px;
+      grid-template-rows: 300px 300px 300px;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "web1 web1"
@@ -161,13 +202,6 @@ padding: 50px;
         ;
     }
   
-    #work {
-      margin-bottom: 150px;
-    }
-  
-    .page-section h1 {
-      margin-right: 50px;
-    }
   
   
   
@@ -197,40 +231,12 @@ padding: 50px;
       background-color: rgba(0, 0, 0, 0.5);
     }
 
-#work h1 {
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-}
 
-
-#contact h1 {
-  font-size: 3rem;
-  width: auto;
-  display: flex;
-  justify-content: center;
-
-}
-
-#skill__blocks {
-  display: flex;
-}
-#contact_cta {
-  border: solid 2px blue;
-  border-radius: 25px;
-  padding: 10px;
-}
-.block1, 
-.block2,
-.block3 {
-  border: solid 2px black;
-}
-
-.contact__links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 20px 20px;
+/* Contact Section */
+.contact__title h1 {
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 2rem;
 }
 
 
@@ -239,70 +245,12 @@ padding: 50px;
 
 
 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
 
 
 /* Media Queries */
 
-@media only screen and (max-width: 770px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-         margin: auto;
-    width: 770px;
-    padding: 30px
-  }
-
-  .logo {
-    display: block;
-    margin: auto;
-    margin-bottom: 30px;
   
-  }
 
-  .nav__links li {
-    display: inline;
-    padding: 0 20px;
-  }
-
-
-  .banner__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .self__portrait {
-    width: 100%;
-    margin-top: 70px;
-
-  }
-  
-}
 
 
