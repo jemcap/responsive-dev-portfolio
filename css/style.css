@@ -284,7 +284,7 @@ padding: 50px;
   display: grid;
   width: 50vw;
 grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 240px);
+grid-template-rows: 400px 200px 200px;
 grid-gap: 10px;
 grid-template-areas: 
 "web1 web1"
@@ -412,12 +412,27 @@ grid-template-areas:
   .hero__title {
     text-align: center;
   }
+
+  .hero__title h1 {
+    font-size: 4rem;
+  }
+
+  .hero__title h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero__btn button{
+    width: 120px;
+    font-size: 1em;
+  }
   
   #banner__image {
-    width: 200px;
+    width: 300px;
     bottom: 15%;
-    margin-top: 50px;
+    margin-top: 100px;
   }
+
+
 
   .page-section {
     padding-top: 3rem;
