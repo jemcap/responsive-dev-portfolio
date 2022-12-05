@@ -61,7 +61,8 @@ on the logo to automatically, according to the width of the viewport, to move co
 }
 
 /* removes the underline of the anchor tag */
-li, a {
+li, 
+.nav__links a {
   text-decoration: none;
   text-transform: uppercase
 }
@@ -227,25 +228,27 @@ padding: 50px;
 
 
 .page-wrapper {
-  width: 100%;
-  max-width: 1440px;
+  
+  
+  max-width: 1250px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .page-section {
+  padding-top: 3rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .left {
-  width: 15%;
+  width: 12%;
 }
 
 .right {
-  width: 75%;
+  width: 88%;
   padding-left: 2rem;
   border-left: 2px solid black;
 }
@@ -271,54 +274,55 @@ padding: 50px;
   margin-top: 2rem;
 }
 
+
+
   
 
 
 /* work grid */
-
-
-#categoryGrid {
-  margin: 0px 5%;
+.wrapper-grid {
   display: grid;
-  grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-areas:
-    "web1 web1"
-    "web2 web3"
-    "web4 web5";
+  width: 50vw;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 240px);
+grid-gap: 10px;
+grid-template-areas: 
+"web1 web1"
+"web2 web3"
+"web4 web5";
+
+
 }
 
+/* Grid items */
 #web1 {
   grid-area: web1;
-  background-color: antiquewhite;
-  transition: all .3s ease 0s;
+  background-image: url(../images/02-portfolio-1.jpg);
 }
 #web2 {
   grid-area: web2;
-  background-color: skyblue;
+  background-image: url(../images/02-portfolio-2.jpg);
 }
 #web3 {
   grid-area: web3;
-  background-color: red
+  background-image: url(../images/02-portfolio-3.jpg);
 }
 #web4 {
   grid-area: web4;
-  background-color: rgb(213, 144, 54);
+  background-image: url(../images/02-portfolio-4.jpg);
 }
 #web5 {
   grid-area: web5;
-  background-color: antiquewhite;
+  background-image: url(../images/02-run-buddy.jpg);
 }
 
-#web1:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 .categoryGridArea {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5px;
+  margin: 7px;
   cursor: pointer;
   display: grid;
   align-content: end;
@@ -336,11 +340,30 @@ padding: 50px;
 
 
 
+
+
 /* Contact Section */
+.contact {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+}
+
+.contact__links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+}
 .contact__title h1 {
   font-size: 2rem;
   text-align: right;
   padding-right: 2rem;
+}
+
+.contact__links a {
+  margin: 0 20px;
+
 }
 
 
@@ -353,8 +376,116 @@ padding: 50px;
 
 /* Media Queries */
 
+@media only screen and (max-width: 600px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: block;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .nav__links li, .cta button {
+    font-size: 10px;
+
+  }
+
+  #hero {
+    height: 90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+  
+  #banner__image {
+    width: 200px;
+    bottom: 15%;
+    margin-top: 50px;
+  }
+
+  .page-section {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    border-left: none;
+    border-top: 2px solid black;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .about__title h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 2rem;
+    
+  }
+
+  .work__title h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 2rem;
+    
+  }
+
+  .contact__title h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 2rem;
+    
+  }
+
+  .about__content {
+    text-align: justify;
+  }
 
   
+
+  .wrapper-grid {
+    width: 100vw;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "web1"
+      "web2"
+      "web3"
+      "web4"
+      "web5";
+  }
+}
+
+
+
+  
+
+
+
+
 
 
 
