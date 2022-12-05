@@ -91,7 +91,7 @@ li, a {
   text-transform: uppercase;
   border-radius: 20px;
   border: none;
-  background-color: skyblue;
+  background-color: #0000ff;
   color: white;
   cursor: pointer;
   transition: all .3s ease 0s;
@@ -113,14 +113,14 @@ padding: 50px;
 }
 
 .hero__title {
-  width: 75%;
+  width: 100%;
 }
 
 .hero__title-color {
   position: relative;
   font-weight: 800;
-  box-shadow: inset 0 0 0 0 #54b3d6;
-  color: #54b3d6;
+  box-shadow: inset 0 0 0 0 #0000ff;
+  color: #0000ff;
   margin: 0 -.25rem;
   padding: 0 .25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -131,63 +131,67 @@ padding: 50px;
 }
 
 .hero__title-color:hover {
-  box-shadow: inset 200px 0 0 0 #54b3d6;
+  box-shadow: inset 200px 0 0 0 #0000ff;
   color: white;
 }
 
-.hero__title a {
+.hero__swap {
   overflow: hidden;
   position: relative;
   display: inline-block;
 }
 
-.hero__title a::before,
-.hero__title a::after {
+.hero__swap::before,
+.hero__swap::after {
  content: '';
   position: absolute;
   width: 100%;
   left: 0;
 }
-.hero__title a::before {
-  background-color: #54b3d6;
+.hero__swap::before {
+  background-color: #0000ff;
   height: 2px;
   bottom: 0;
   transform-origin: 100% 50%;
   transform: scaleX(0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.hero__title a::after {
+.hero__swap::after {
   content: attr(data-replace);
   height: 100%;
   top: 0;
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  color: #54b3d6;
+  color: #0000ff;
 }
 
-.hero__title a:hover::before {
+.hero__swap:hover::before {
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
-.hero__title a:hover::after {
+.hero__swap:hover::after {
   transform: translate3d(0, 0, 0);
 }
 
-.hero__title a span {
+.hero__swap span {
   display: inline-block;
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.hero__title a:hover span {
+.hero__swap:hover span {
   transform: translate3d(-200%, 0, 0);
 }
 
-.hero__title a {
+.hero__swap {
   text-decoration: none;
   color: #18272F;
   font-weight: 700;
   vertical-align: top;
+}
+
+.hero__btn {
+  margin-top: 2rem;
 }
 
 
@@ -199,13 +203,8 @@ padding: 50px;
 }
 
 .banner__content h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   
-
-}
-
-
-.button {
 
 }
 
@@ -213,14 +212,14 @@ padding: 50px;
 #hero {
   height: 90vh;
   display:flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   
 
 }
 
 #banner__image {
-  width: 700px;
+  width: 500px;
   bottom: 15%;
 }
 
