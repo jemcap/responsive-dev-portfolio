@@ -28,10 +28,11 @@ h6 {
 p {
   margin: 0;
 }
+
 /* global variables to declare colours much more conviniently */
 :root {
-  --primary-color: 
-  --secondary-color:
+  --primary-color:
+    --secondary-color:
 }
 
 img {
@@ -61,13 +62,13 @@ on the logo to automatically, according to the width of the viewport, to move co
 }
 
 /* removes the underline of the anchor tag */
-li, 
+li,
 .nav__links a {
   text-decoration: none;
   text-transform: uppercase
 }
 
-li, 
+li,
 a {
   text-decoration: none;
 }
@@ -107,14 +108,14 @@ a {
 
 .cta button:hover {
   padding: 15px;
-  box-shadow: 2px 4px  #4f4f4f
+  box-shadow: 2px 4px #4f4f4f
 }
 
 .hero-banner {
   width: 100%;
   height: 100%;
   overflow: hidden;
-padding: 50px;
+  padding: 50px;
 
 
 }
@@ -150,11 +151,12 @@ padding: 50px;
 
 .hero__swap::before,
 .hero__swap::after {
- content: '';
+  content: '';
   position: absolute;
   width: 100%;
   left: 0;
 }
+
 .hero__swap::before {
   background-color: #0000ff;
   height: 2px;
@@ -163,6 +165,7 @@ padding: 50px;
   transform: scaleX(0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
+
 .hero__swap::after {
   content: attr(data-replace);
   height: 100%;
@@ -177,6 +180,7 @@ padding: 50px;
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
+
 .hero__swap:hover::after {
   transform: translate3d(0, 0, 0);
 }
@@ -201,6 +205,12 @@ padding: 50px;
   margin-top: 2rem;
 }
 
+.hero__btn button {
+  width: 190px;
+  padding: 1rem;
+  font-weight: bold;
+}
+
 
 .banner__content {
   color: white;
@@ -211,17 +221,17 @@ padding: 50px;
 
 .banner__content h1 {
   font-size: 5rem;
-  
+
 
 }
 
 /* Hero IDs */
 #hero {
   height: 90vh;
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+
 
 }
 
@@ -233,8 +243,8 @@ padding: 50px;
 
 
 .page-wrapper {
-  
-  
+
+
   max-width: 1250px;
   padding: 0 15px;
   margin: 0 auto;
@@ -264,7 +274,7 @@ padding: 50px;
   font-size: 2rem;
   text-align: right;
   padding-right: 2rem;
-  
+
 }
 
 /* Work */
@@ -272,7 +282,7 @@ padding: 50px;
   font-size: 2rem;
   text-align: right;
   padding-right: 2rem;
-  
+
 }
 
 #work {
@@ -281,20 +291,20 @@ padding: 50px;
 
 
 
-  
+
 
 
 /* work grid */
 .wrapper-grid {
   display: grid;
   width: 70vw;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 400px 200px 200px;
-grid-gap: 10px;
-grid-template-areas: 
-"web1 web1"
-"web2 web3"
-"web4 web5";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 400px 200px 200px;
+  grid-gap: 10px;
+  grid-template-areas:
+    "web1 web1"
+    "web2 web3"
+    "web4 web5";
 
 
 }
@@ -304,18 +314,22 @@ grid-template-areas:
   grid-area: web1;
   background-image: url(../images/02-portfolio-1.jpg);
 }
+
 #web2 {
   grid-area: web2;
   background-image: url(../images/02-portfolio-2.jpg);
 }
+
 #web3 {
   grid-area: web3;
   background-image: url(../images/02-portfolio-3.jpg);
 }
+
 #web4 {
   grid-area: web4;
   background-image: url(../images/02-portfolio-4.jpg);
 }
+
 #web5 {
   grid-area: web5;
   background-image: url(../images/02-run-buddy.jpg);
@@ -334,7 +348,7 @@ grid-template-areas:
   width: 100%;
 }
 
-.categoryGridArea:hover  {
+.categoryGridArea:hover {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
@@ -363,8 +377,9 @@ grid-template-areas:
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
 }
+
 .contact__title h1 {
   font-size: 2rem;
   text-align: right;
@@ -387,53 +402,68 @@ grid-template-areas:
 
 /* Media Queries */
 
-@media only screen and (min-width: 200px) and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
   header {
     display: block;
     text-align: center;
   }
 
+  .right {
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-top: 2px solid black;
+
+  }
+
+  .left {
+    width: 100%;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    align-items: center;
   }
 
-  .nav__links li, .cta button {
+  .nav__links li,
+  .cta button {
     font-size: 13.5px;
 
   }
 
   #hero {
     height: 90vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-  
+    flex-direction: column;
+
   }
 
   .hero__title {
     text-align: center;
-    
+
   }
 
   .hero__title h1 {
-    font-size: 1rem;
+    font-size: 4rem;
   }
 
   .hero__title h2 {
     font-size: 1.5rem;
   }
 
-  .hero__btn button{
+
+
+  .hero__btn button {
     width: 120px;
     font-size: 1em;
   }
-  
+
   #banner__image {
-    width: 100px;
+    width: 200px;
     bottom: 15%;
     margin-top: 100px;
   }
@@ -448,16 +478,19 @@ grid-template-areas:
     align-items: center;
   }
 
-  
 
- 
+
+
+
 
   .about__title h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
-    padding-right: 2rem;
-    
+
+
   }
+
+
 
   .about__content {
     padding-top: 15px;
@@ -466,8 +499,7 @@ grid-template-areas:
   .work__title h1 {
     font-size: 2rem;
     text-align: center;
-    padding-right: 2rem;
-    
+
   }
 
   .heading {
@@ -487,7 +519,7 @@ grid-template-areas:
     font-size: 2rem;
     text-align: center;
     padding-right: 2rem;
-    
+
   }
 
   .contact__links {
@@ -500,12 +532,12 @@ grid-template-areas:
     text-align: justify;
   }
 
-  
+
 
   .wrapper-grid {
     padding: 1rem 0;
-    width: 100vw;
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    width: 90vw;
+    grid-template-rows: repeat(5, 300px);
     grid-template-columns: 1fr;
     grid-template-areas:
       "web1"
@@ -514,12 +546,16 @@ grid-template-areas:
       "web4"
       "web5";
   }
+
+  .contact__links {
+    text-align: center;
+  }
 }
 
 
 /* Media query for medium-size screens */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 601px) and (max-width: 900px) {
 
   * {
     margin: 0;
@@ -538,18 +574,19 @@ grid-template-areas:
     margin-bottom: 50px;
   }
 
-  .nav__links li, .cta button {
+  .nav__links li,
+  .cta button {
     font-size: 13.5px;
 
   }
 
   #hero {
-    height: 90vh;
-    display:flex;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-  
+    flex-direction: column;
+
   }
 
   .hero__title {
@@ -564,11 +601,12 @@ grid-template-areas:
     font-size: 1.5rem;
   }
 
-  .hero__btn button{
-    width: 120px;
-    font-size: 1em;
+  .hero__btn button {
+    padding: 1rem;
+    width: 170px;
+    font-size: 0.9em;
   }
-  
+
   #banner__image {
     width: 300px;
     bottom: 15%;
@@ -601,7 +639,7 @@ grid-template-areas:
     font-size: 2rem;
     text-align: center;
     padding-right: 2rem;
-    
+
   }
 
   .about__content {
@@ -612,7 +650,7 @@ grid-template-areas:
     font-size: 2rem;
     text-align: center;
     padding-right: 2rem;
-    
+
   }
 
   .heading {
@@ -632,7 +670,7 @@ grid-template-areas:
     font-size: 2rem;
     text-align: center;
     padding-right: 2rem;
-    
+
   }
 
   .contact__links {
@@ -645,7 +683,7 @@ grid-template-areas:
     text-align: justify;
   }
 
-  
+
 
   .wrapper-grid {
     padding: 1rem 0;
@@ -661,19 +699,19 @@ grid-template-areas:
   }
 }
 
-@media only screen and (max-width: 1420px) {
+@media only screen and (min-width: 901px) and (max-width: 1420px) {
   .wrapper-grid {
     display: grid;
     width: 70vw;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 400px 200px 200px;
-  grid-gap: 10px;
-  grid-template-areas: 
-  "web1 web1"
-  "web2 web3"
-  "web4 web5";
-  
-  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px 200px 200px;
+    grid-gap: 10px;
+    grid-template-areas:
+      "web1 web1"
+      "web2 web3"
+      "web4 web5";
+
+
   }
 
   .about__title h1 {
@@ -688,21 +726,3 @@ grid-template-areas:
     font-size: 1.5rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
