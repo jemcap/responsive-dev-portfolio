@@ -2,9 +2,7 @@
 
 ## Description
 
-This small project involves refactoring a starter code to enhance accessibility for web visitors and other developers alike. The purpose of this is to practice using proper HTML semantics and formatting that will be beneficial to other similar projects. 
-
-As a developer, the code must be refactored from the given starter code to make the webpage more accessible. This can be done so by adding HTML semantics throughout the code and follow a logical format, adding 'alt' attributes to images, heading attributes fall in sequential order and Title elements contain a concise, descriptive title.
+This is the second week challenge for the Front-end Development Bootcamp. This is a project which involves using HTML and CSS to build a simple but professional responsive Web-Dev portfolio.
 
 ## Installation 
 
@@ -17,4 +15,4 @@ MIT License - allow to make and distributing closed source versions.
 
 ## Preview of webpage
 
-https://jemcap.github.io/horiseon-refactor-project/
+https://jemcap.github.io/responsive-dev-portfolio/
