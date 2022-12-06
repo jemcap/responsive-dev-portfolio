@@ -111,6 +111,11 @@ a {
   box-shadow: 2px 4px #4f4f4f
 }
 
+.hero__btn button:hover {
+  padding: 20px;
+  box-shadow: 2px 4px #4f4f4f
+}
+
 .hero-banner {
   width: 100%;
   height: 100%;
@@ -297,7 +302,7 @@ a {
 /* work grid */
 .wrapper-grid {
   display: grid;
-  width: 70vw;
+  width: 55vw;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 400px 200px 200px;
   grid-gap: 10px;
@@ -344,22 +349,26 @@ a {
   cursor: pointer;
   display: grid;
   align-content: end;
-  transition: all .3s ease 0s;
+  transition: all .3s ease-in-out 0s;
   width: 100%;
 }
 
 .categoryGridArea:hover {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-bottom: 5px solid #0000ff;
 }
 
 .heading {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 15px;
-  height: 25px;
-  color: white;
+  height: 100%;
   font-size: 18px;
-  border-bottom: 5px solid #ff6200;
 }
+
+.heading a {
+  color: white;
+}
+
+
 
 
 
