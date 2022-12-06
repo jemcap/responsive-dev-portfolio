@@ -116,6 +116,8 @@ a {
 
 /* Hero Styling */
 /* Start */
+
+/* Hero hover effects */
 .hero__btn button:hover {
   padding: 20px;
   box-shadow: 2px 4px #4f4f4f;
@@ -128,6 +130,7 @@ a {
   padding: 50px;
 }
 
+/* Hover effect that highlights specific elements -- highlights 'Josh' when hovered over */
 .hero__title {
   width: 100%;
 }
@@ -151,6 +154,9 @@ a {
   color: white;
 }
 
+
+/* Hover effects that replaces specific elements when hovered over and returns to the original value when off it 
+-- 'Aspiring Web Developer -- 'Developer' switches to 'Designer' when hovered.*/
 .hero__swap {
   overflow: hidden;
   position: relative;
@@ -279,7 +285,6 @@ a {
   text-align: right;
   padding-right: 2rem;
 }
-
 /* About Styling End */
 
 /* Work Styling */
@@ -309,12 +314,12 @@ a {
 /* Grid items */
 #web1 {
   grid-area: web1;
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/ntudi.png);
 }
 
 #web2 {
   grid-area: web2;
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/dcloud9.png);
 }
 
 #web3 {
